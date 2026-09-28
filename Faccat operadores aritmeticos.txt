@@ -1,0 +1,145 @@
+algoritmo "E05"
+
+var
+   valor: real
+
+inicio
+
+   escreva("Coloque um numero para ter o seu antecessor: ")
+   leia(valor)
+
+   escreval("O antecessor de ", valor, " é: ", valor - 1)
+
+fimalgoritmo
+
+----------------------------------------------
+
+algoritmo "E06"
+
+var
+   base, altura: real
+
+inicio
+
+   escreva("Coloque a base do retangulo: ")
+   leia(base)
+
+   escreva("Coloque a altura do retangulo: ")
+   leia(altura)
+
+   escreval("A area do seu retangulo é ", base * altura)
+
+fimalgoritmo
+
+---------------------------------------------------
+
+algoritmo "E07"
+
+var
+   anos, meses, dias: inteiro
+
+inicio
+
+   escreva("Quantos anos você tem? ")
+   leia(anos)
+
+   escreva("Quantos meses você tem? ")
+   leia(meses)
+
+   escreva("Quantos dias você tem? ")
+   leia(dias)
+
+   escreval("Seu tempo de vida na terra é: ", (anos * 365) + (meses * 30) + dias)
+
+fimalgoritmo
+
+-------------------------------------------------------
+
+algoritmo "E08"
+
+var
+   totalEleitores, votosBrancos, votosNulos, votosValidos: real
+
+inicio
+
+   escreva("Quantos eleitores no municipio: ")
+   leia(totalEleitores)
+
+   escreva("Quantos votos brancos tiveram? ")
+   leia(votosBrancos)
+
+   escreva("Quantos votos nulos tiveram? ")
+   leia(votosNulos)
+
+   escreva("Quantos votos validos tiveram? ")
+   leia(votosValidos)
+
+   escreval("O porcentual dos brancos são: ", (votosBrancos / totalEleitores) * 100, "%")
+   escreval("O porcentual dos nulos são: ", (votosNulos / totalEleitores) * 100, "%")
+   escreval("O porcentual dos votos validos são: ", (votosValidos / totalEleitores) * 100, "%")
+
+fimalgoritmo
+
+---------------------------------------------------------------
+
+algoritmo "E09"
+
+var
+   salario, porcentual: real
+
+inicio
+
+   escreva("Qual seu salario? ")
+   leia(salario)
+
+   escreva("Qual o porcentual de reajuste? ")
+   leia(porcentual)
+
+   escreval("O seu novo salario é: ", ((salario * porcentual) / 100) + salario)
+
+fimalgoritmo
+
+------------------------------------------------------------------
+
+algoritmo "E10"
+
+var
+   custoFabrica: real
+
+inicio
+
+   escreva("Digite o valor do custo de fabrica: ")
+   leia(custoFabrica)
+
+   escreval("O porcentual do distribuidor é: ", (custoFabrica * 28) / 100)
+   escreval("Os impostos são: ", (custoFabrica * 45) / 100)
+   escreval("O custo final do veiculo é: ", custoFabrica + ((custoFabrica * 28) / 100) + ((custoFabrica * 45) / 100))
+
+fimalgoritmo
+
+---------------------------------------------------------------------
+
+algoritmo "E11"
+
+var
+   carrosVendidos, valorVendas, salarioFixo, valorPorCarro: real
+
+inicio
+
+   escreva("Quantos carros foram vendidos? ")
+   leia(carrosVendidos)
+
+   escreva("Qual o valor total das vendas? ")
+   leia(valorVendas)
+
+   escreva("Qual o salario fixo? ")
+   leia(salarioFixo)
+
+   escreva("Quanto recebe por carro vendido? ")
+   leia(valorPorCarro)
+
+   escreval("O salario final do vendedor é: ", salarioFixo + (carrosVendidos * valorPorCarro) + (valorVendas * 5 / 100))
+
+fimalgoritmo
+
+-----------------------------------------------------

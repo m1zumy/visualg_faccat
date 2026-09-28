@@ -1,0 +1,249 @@
+algoritmo "E14"
+
+var
+   valor: real
+
+inicio
+
+   escreva("Digite um valor: ")
+   leia(valor)
+
+   se valor >= 10 entao
+      escreval("O numero colocado é maior que dez")
+   senao
+      escreval("O numero colocado é menor que 10")
+   fimse
+
+fimalgoritmo 
+
+-------------------------------------
+
+algoritmo "E15"
+var
+   valor: real
+inicio
+   escreva("Coloque um valor: ")
+   leia(valor)
+
+   se valor >= 0 entao
+      escreval("O numero é positivo")
+   senao
+      escreval("O numero é negativo")
+   fimse
+fimalgoritmo
+
+--------------------------------------
+
+algoritmo "E16"
+var
+   macas: real
+inicio
+   escreva("Digite quantas maças voce pegou: ")
+   leia(macas)
+
+   se macas >= 12 entao
+      escreval("O valor das suas macas é: ", macas)
+   senao
+      escreval("O valor das suas macas é: ", macas * 1.30)
+   fimse
+fimalgoritmo
+
+--------------------------------------
+
+algoritmo "E17"
+var
+   soma, valor: real
+   i: inteiro
+inicio
+   soma <- 0
+
+   para i de 1 ate 2 faca
+      escreva("Coloque o valor da nota: ")
+      leia(valor)
+      soma <- soma + valor
+   fimpara
+
+   se soma / 2 >= 6 entao
+      escreva("O resultado é Aprovado")
+   senao
+      escreva("O resultado é Reprovado")
+   fimse
+
+   escreval(" e a média dele foi ", soma / 2)
+fimalgoritmo
+
+--------------------------------------------
+
+algoritmo "E18"
+var
+   anoNascimento, anoAtual: inteiro
+inicio
+   escreva("Digite o ano em que voce nasceu: ")
+   leia(anoNascimento)
+
+   escreva("Digite o ano atual: ")
+   leia(anoAtual)
+
+   se anoAtual - anoNascimento >= 16 entao
+      escreval("Você pode votar")
+   senao
+      escreval("Você não pode votar")
+   fimse
+fimalgoritmo
+
+-------------------------------------------
+
+algoritmo "E19"
+var
+   valorA, valorB: real
+inicio
+   escreva("Digite valor A: ")
+   leia(valorA)
+
+   escreva("Digite o valor B: ")
+   leia(valorB)
+
+   se valorA > valorB entao
+      escreval("O maior numero é ", valorA)
+      escreval("O menor numero é ", valorB)
+   senao
+      escreval("O maior numero é ", valorB)
+      escreval("O menor numero é ", valorA)
+   fimse
+fimalgoritmo
+
+----------------------------------------------
+
+algoritmo "E20"
+var
+   valorA, valorB: real
+inicio
+   escreva("Digite valor A: ")
+   leia(valorA)
+
+   escreva("Digite o valor B: ")
+   leia(valorB)
+
+   se valorA < valorB entao
+      escreval(valorA, ", ", valorB)
+   senao
+      escreval(valorB, ", ", valorA)
+   fimse
+fimalgoritmo
+
+-----------------------------------------------
+
+algoritmo "E21"
+var
+   horaInicio, horaFim: real
+inicio
+   escreva("Digite o horario de inicio: ")
+   leia(horaInicio)
+
+   escreva("Digite o horario do fim: ")
+   leia(horaFim)
+
+   se horaFim - horaInicio > 24 entao
+      escreval("O jogo foi cancelado por exceder horas")
+   senao
+      escreval("O jogo foi aprovado e terá ", horaFim - horaInicio, " horas")
+   fimse
+fimalgoritmo
+
+--------------------------------------------------
+
+algoritmo "E22"
+var
+   horas, valorHora: real
+inicio
+   escreva("Digite quantas horas você trabalhou no mês: ")
+   leia(horas)
+
+   escreva("Digite o valor da hora trabalhada: ")
+   leia(valorHora)
+
+   se horas > 160 entao
+      escreval("Seu salário total é R$ ", (160 * valorHora) + ((horas - 160) * valorHora * 1.5))
+   senao
+      escreval("Seu salário total é R$ ", horas * valorHora)
+   fimse
+fimalgoritmo
+
+------------------------------------------------------------
+
+algoritmo "E24"
+var
+   salario, vendas: real
+inicio
+   escreva("Digite o salário fixo: ")
+   leia(salario)
+
+   escreva("Digite o valor total das vendas: ")
+   leia(vendas)
+
+   se vendas <= 1500 entao
+      escreval("Seu salário total é R$ ", salario + vendas * 0.03)
+   senao
+      escreval("Seu salário total é R$ ", salario + (1500 * 0.03) + ((vendas - 1500) * 0.05))
+   fimse
+fimalgoritmo
+
+------------------------------------------------------------------
+
+algoritmo "E25"
+var
+   conta: inteiro
+   saldo, debito, credito, saldoAtual: real
+inicio
+   escreva("Qual o numero da sua conta: ")
+   leia(conta)
+
+   escreva("Saldo atual: ")
+   leia(saldo)
+
+   escreva("Digite o valor do debito: ")
+   leia(debito)
+
+   escreva("Digite o valor do credito: ")
+   leia(credito)
+
+   saldoAtual <- saldo - debito + credito
+
+   escreval("Sua conta é ", conta)
+   escreva("O seu saldo atual é ", saldoAtual, " está ")
+
+   se saldoAtual >= 0 entao
+      escreval("positivo")
+   senao
+      escreval("negativo")
+   fimse
+fimalgoritmo
+
+------------------------------------------------------------------------
+
+algoritmo "E26"
+var
+   estoqueAtual, estoqueMaximo, estoqueMinimo, media: real
+inicio
+   escreva("Quantidade atual no estoque: ")
+   leia(estoqueAtual)
+
+   escreva("Quantidade maxima em estoque: ")
+   leia(estoqueMaximo)
+
+   escreva("Quantidade minima em estoque: ")
+   leia(estoqueMinimo)
+
+   media <- (estoqueMaximo + estoqueMinimo) / 2
+
+   escreva("A quantidade media é ", media, " você ")
+
+   se estoqueAtual >= media entao
+      escreval("não deve efetuar a compra")
+   senao
+      escreval("deve efetuar a compra")
+   fimse
+fimalgoritmo
+
+--------------------------------------------------------------------------
+

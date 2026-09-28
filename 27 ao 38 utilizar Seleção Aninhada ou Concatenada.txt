@@ -1,0 +1,405 @@
+algoritmo "E27"
+
+var
+   valor: real
+
+inicio
+   escreva("Digite um valor: ")
+   leia(valor)
+
+   se valor > 0 entao
+      escreva("O seu numero é positivo")
+   senao
+      se valor = 0 entao
+         escreva("O seu numero é igual")
+      senao
+         escreva("O seu numero é negativo")
+      fimse
+   fimse
+
+fimalgoritmo
+
+---------------------------------------------------
+
+algoritmo "E28"
+
+var
+   a, b, c: real
+
+inicio
+   escreva("Coloque valor A: ")
+   leia(a)
+
+   escreva("Coloque valor B: ")
+   leia(b)
+
+   escreva("Coloque valor C: ")
+   leia(c)
+
+   se a > b entao
+      se a > c entao
+         escreva("O maior numero é ", a)
+      senao
+         escreva("O maior numero é ", c)
+      fimse
+   senao
+      se b > c entao
+         escreva("O maior numero é ", b)
+      senao
+         escreva("O maior numero é ", c)
+      fimse
+   fimse
+
+fimalgoritmo
+
+-------------------------------------------------------
+
+algoritmo "E29"
+
+var
+   a, b, c, menor: real
+
+inicio
+   escreva("Coloque valor A: ")
+   leia(a)
+
+   escreva("Coloque valor B: ")
+   leia(b)
+
+   escreva("Coloque valor C: ")
+   leia(c)
+
+   se a < b entao
+      se a < c entao
+         menor <- a
+      senao
+         menor <- c
+      fimse
+   senao
+      se b < c entao
+         menor <- b
+      senao
+         menor <- c
+      fimse
+   fimse
+
+   escreva("A soma dos dois maiores é ", a + b + c - menor)
+
+fimalgoritmo
+
+----------------------------------------------------------------
+
+algoritmo "E30"
+
+var
+   a, b, c: real
+
+inicio
+   escreva("Coloque valor A: ")
+   leia(a)
+
+   escreva("Coloque valor B: ")
+   leia(b)
+
+   escreva("Coloque valor C: ")
+   leia(c)
+
+   se a < b e b < c entao
+      escreva(a, " ", b, " ", c)
+   senao
+      se a < c e c < b entao
+         escreva(a, " ", c, " ", b)
+      senao
+         se b < a e a < c entao
+            escreva(b, " ", a, " ", c)
+         senao
+            se b < c e c < a entao
+               escreva(b, " ", c, " ", a)
+            senao
+               se c < a e a < b entao
+                  escreva(c, " ", a, " ", b)
+               senao
+                  escreva(c, " ", b, " ", a)
+               fimse
+            fimse
+         fimse
+      fimse
+   fimse
+
+fimalgoritmo
+
+---------------------------------------------------------------------
+
+algoritmo "E31"
+
+var
+   a, b, c: real
+
+inicio
+   escreva("Coloque valor A: ")
+   leia(a)
+
+   escreva("Coloque valor B: ")
+   leia(b)
+
+   escreva("Coloque valor C: ")
+   leia(c)
+
+   se a < b + c e b < a + c e c < a + b entao
+      escreva("Formam um triangulo")
+   senao
+      escreva("Nao formam um triangulo")
+   fimse
+
+fimalgoritmo
+
+--------------------------------------------------------------------------
+
+algoritmo "E32"
+
+var
+   nomeTime1, nomeTime2: caractere
+   gols1, gols2: inteiro
+
+inicio
+   escreva("Coloque o nome do primeiro time: ")
+   leia(nomeTime1)
+
+   escreva("Coloque o nome do segundo time: ")
+   leia(nomeTime2)
+
+   escreva("Quantos gols o time ", nomeTime1, " fez? ")
+   leia(gols1)
+
+   escreva("Quantos gols o time ", nomeTime2, " fez? ")
+   leia(gols2)
+
+   se gols1 > gols2 entao
+      escreva("O time ", nomeTime1, " ganhou")
+   senao
+      se gols2 > gols1 entao
+         escreva("O time ", nomeTime2, " ganhou")
+      senao
+         escreva("EMPATE")
+      fimse
+   fimse
+
+fimalgoritmo
+
+-----------------------------------------------------------------------------
+
+algoritmo "E33"
+
+var
+   a, b: real
+
+inicio
+   escreva("Digite o valor A: ")
+   leia(a)
+
+   escreva("Digite o valor B: ")
+   leia(b)
+
+   se a > b entao
+      escreva("O valor de A é maior")
+   senao
+      se b > a entao
+         escreva("O valor de B é maior")
+      senao
+         escreva("Numeros iguais")
+      fimse
+   fimse
+
+fimalgoritmo
+
+--------------------------------------------------------------------------------
+
+algoritmo "E34"
+
+var
+   x, y, z: real
+
+inicio
+   escreva("Digite o valor de X: ")
+   leia(x)
+
+   escreva("Digite o valor de Y: ")
+   leia(y)
+
+   z <- (x * y) + 5
+
+   se z <= 0 entao
+      escreva("Z = ", z, ", Resposta = A")
+   senao
+      se z <= 100 entao
+         escreva("Z = ", z, ", Resposta = B")
+      senao
+         escreva("Z = ", z, ", Resposta = C")
+      fimse
+   fimse
+
+fimalgoritmo
+
+-------------------------------------------------------------------------------------
+
+algoritmo "E35"
+
+var
+   litros, preco, valor: real
+   tipo: caractere
+
+inicio
+   escreva("Quantos litros foram vendidos? ")
+   leia(litros)
+
+   escreva("Tipo de combustivel (A/G): ")
+   leia(tipo)
+
+   se tipo = "A" ou tipo = "a" entao
+      preco <- 2.90
+
+      se litros <= 20 entao
+         valor <- litros * preco * 0.97
+      senao
+         valor <- litros * preco * 0.95
+      fimse
+   senao
+      preco <- 3.30
+
+      se litros <= 20 entao
+         valor <- litros * preco * 0.96
+      senao
+         valor <- litros * preco * 0.94
+      fimse
+   fimse
+
+   escreva("Valor a pagar: R$ ", valor)
+
+fimalgoritmo
+
+--------------------------------------------------------------------------------------
+
+algoritmo "E36"
+
+var
+   homem1, homem2, mulher1, mulher2: inteiro
+   homemVelho, homemNovo, mulherVelha, mulherNova: inteiro
+
+inicio
+   escreva("Idade do primeiro homem: ")
+   leia(homem1)
+
+   escreva("Idade do segundo homem: ")
+   leia(homem2)
+
+   escreva("Idade da primeira mulher: ")
+   leia(mulher1)
+
+   escreva("Idade da segunda mulher: ")
+   leia(mulher2)
+
+   se homem1 > homem2 entao
+      homemVelho <- homem1
+      homemNovo <- homem2
+   senao
+      homemVelho <- homem2
+      homemNovo <- homem1
+   fimse
+
+   se mulher1 > mulher2 entao
+      mulherVelha <- mulher1
+      mulherNova <- mulher2
+   senao
+      mulherVelha <- mulher2
+      mulherNova <- mulher1
+   fimse
+
+   escreval("Soma: ", homemVelho + mulherNova)
+   escreval("Produto: ", homemNovo * mulherVelha)
+
+fimalgoritmo
+
+-----------------------------------------------------------------------------------
+
+algoritmo "E37"
+
+var
+   morangos, macas, totalKg: real
+   valorMorangos, valorMacas, total: real
+
+inicio
+   escreva("Quantos Kg de morangos? ")
+   leia(morangos)
+
+   escreva("Quantos Kg de macas? ")
+   leia(macas)
+
+   totalKg <- morangos + macas
+
+   se morangos <= 5 entao
+      valorMorangos <- morangos * 2.50
+   senao
+      valorMorangos <- morangos * 2.20
+   fimse
+
+   se macas <= 5 entao
+      valorMacas <- macas * 1.80
+   senao
+      valorMacas <- macas * 1.50
+   fimse
+
+   total <- valorMorangos + valorMacas
+
+   se totalKg > 8 ou total > 25 entao
+      total <- total * 0.90
+   fimse
+
+   escreva("Valor a pagar: R$ ", total)
+
+fimalgoritmo
+
+---------------------------------------------------------------------------------------
+
+algoritmo "E38"
+
+var
+   codigo, senha: inteiro
+
+inicio
+   escreva("Digite o codigo de usuario: ")
+   leia(codigo)
+
+   se codigo <> 1234 entao
+      escreva("Usuario invalido!")
+   senao
+      escreva("Digite a senha: ")
+      leia(senha)
+
+      se senha <> 9999 entao
+         escreva("Senha incorreta")
+      senao
+         escreva("Acesso permitido")
+      fimse
+   fimse
+
+fimalgoritmo
+
+---------------------------------------------------------------------------------------
+
+algoritmo "E39"
+
+var
+   A, B, C: logico
+
+inicio
+   A <- verdadeiro
+   B <- verdadeiro
+   C <- falso
+
+   escreval("a) ", (A e B) ou (A <> B))
+   escreval("b) ", (A ou B) e (A e C))
+   escreval("c) ", A ou C e (B <> A) e nao B)
+
+fimalgoritmo
+
+----------------------------------------------------------------------------------------------
